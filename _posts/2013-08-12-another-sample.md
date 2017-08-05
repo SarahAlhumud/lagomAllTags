@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Another sample
+tags: [test, jekyll]
 categories:
 - blog
 ---

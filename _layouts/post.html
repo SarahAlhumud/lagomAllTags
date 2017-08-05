@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: default 
 ---
 
 <p class="meta">
-  {{ page.date | date: "%B %d, %Y" }} 
+  {{ page.date | date: "%B %d, %Y" }}
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>
@@ -24,4 +24,17 @@ layout: default
     </li>
     {% endfor %}
   </ul>
+
+  <h3>Tags :</h3>
+  <ul class="posts">
+    {% for tag in page.tags %}
+    <li>
+      <a href="{{ site.url }}/tags.html" title="Pages tagged {{ tag }}" > <span class="term">{{ tag }}</span>
+ 
+     <!-- <a href="{{ '/tag/' | append:tag[0] }}.html" rel="tag">{{ tag[0] }} -->
+      </a>
+    </li>
+    {% unless forloop.last %}{% endunless %}{% endfor %}
+  </ul>
+
 </div>

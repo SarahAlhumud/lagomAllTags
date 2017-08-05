@@ -1,0 +1,7 @@
+<ul>
+  {% for tag in site.tags %}
+    <li> <a href="{{ site.url }}/tags.html" rel="tag">{{ tag[0] }}
+    {{ tags | first }} 
+    </li>
+  {% endfor %}
+</ul>
